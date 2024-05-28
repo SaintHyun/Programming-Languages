@@ -28,3 +28,4 @@
 /home/kiles/PL/Lab3/FMinus/obj/Debug/net8.0/FMinus.pdb
 /home/kiles/PL/Lab3/FMinus/obj/Debug/net8.0/FMinus.genruntimeconfig.cache
 /home/kiles/PL/Lab3/FMinus/obj/Debug/net8.0/ref/FMinus.dll
+/home/kiles/PL/Lab3/FMinus/obj/Debug/net8.0/FMinus.sourcelink.json

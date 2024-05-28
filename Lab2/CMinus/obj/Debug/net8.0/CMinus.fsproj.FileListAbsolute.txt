@@ -28,3 +28,4 @@
 /home/kiles/PL/Lab2/CMinus/obj/Debug/net8.0/CMinus.pdb
 /home/kiles/PL/Lab2/CMinus/obj/Debug/net8.0/CMinus.genruntimeconfig.cache
 /home/kiles/PL/Lab2/CMinus/obj/Debug/net8.0/ref/CMinus.dll
+/home/kiles/PL/Lab2/CMinus/obj/Debug/net8.0/CMinus.sourcelink.json

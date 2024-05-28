@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "25aH+7rb3NSivNKQYv2gjru7oRbBvgzyYs2d92OXsPTjgAqSJiueR+omkrHu10qyPMMdrtQq85F8Zw53W5pA7w==",
+  "success": true,
+  "projectFilePath": "/home/kiles/PL/Lab1/P1/P1.fsproj",
+  "expectedPackageFiles": [
+    "/home/kiles/.nuget/packages/fsharp.core/8.0.102/fsharp.core.8.0.102.nupkg.sha512"
+  ],
+  "logs": []
+}
