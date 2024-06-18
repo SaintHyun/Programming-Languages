@@ -1,0 +1,3 @@
+let compose f = fun g -> fun x -> f (g x) in
+let twice f = fun x -> f (f x) in
+compose twice
