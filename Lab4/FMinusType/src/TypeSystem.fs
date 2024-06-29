@@ -13,6 +13,7 @@ type Type =
 type TypeEnv = Map<string, Type>
 
 module Type =
+  let mutable eqnoteq : Type list = []
   let mutable counter = 0
   let TypeVar () =
     counter <- counter + 1
@@ -44,6 +45,7 @@ module Type =
     
     | Equal (exp1, exp2) | NotEq (exp1, exp2) ->
       let typ1 = TypeVar() 
+      eqnoteq <- typ1 :: eqnoteq
       [(typ, Bool)] @ gen typenv exp1 typ1 @ gen typenv exp2 typ1
 
     | IfThenElse (exp1, exp2, exp3) ->
@@ -134,7 +136,18 @@ module Type =
       let newenv = unify (typ1, typ2) env
       solving tail newenv typ
 
+  let rec check_eq_noteq (eqnoteq : List<Type>) equation : bool =
+    match eqnoteq with
+    | [] -> false
+    | head :: tail ->
+      let head_type = solving equation Map.empty head
+      match head_type with
+      | Int | Bool -> check_eq_noteq tail equation
+      | _ -> true
+
   let infer (prog: Program) : Type =
     let typ = TypeVar()
     let equation = gen Map.empty prog typ
-    solving equation Map.empty typ
+    let ans = solving equation Map.empty typ
+    if check_eq_noteq eqnoteq equation = true then raise TypeError
+    else ans

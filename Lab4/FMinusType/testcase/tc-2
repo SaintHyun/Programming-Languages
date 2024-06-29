@@ -1,2 +1,1 @@
-let f b = if b then 10 else 20 in 
-f
+let f x = x in if (1 < 2) then f 1 else f 2

@@ -1,1 +1,1 @@
-fun x -> (fun y -> x + y)
+fun g -> (g 1) g < 1
