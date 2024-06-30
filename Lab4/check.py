@@ -64,7 +64,7 @@ def check(problem_name, submit_files, point, tc_num, is_delay):
             grading_str += "E"
 
     ratio = float(grading_str.count("O")) / tc_num
-    obtained_point = point * ratio
+    obtained_point = point * ratio - grading_str.count("X")
     if is_delay:
         grading_str += " (Delay)"
         obtained_point *= DELAY_PENALTY
